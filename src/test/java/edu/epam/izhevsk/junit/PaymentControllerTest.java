@@ -46,7 +46,7 @@ public class PaymentControllerTest {
     }
 
     @Test(expected = InsufficientFundsException.class)
-    public void test() throws InsufficientFundsException {
+    public void testLargeAmount() throws InsufficientFundsException {
         paymentController.deposit(150L, 100L);
     }
 
